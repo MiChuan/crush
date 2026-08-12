@@ -15,7 +15,9 @@
     "pages/admin/shopSettings/shopSettings",
     "pages/admin/rechargeOptions/rechargeOptions",
     "pages/admin/tableCode/tableCode",
-    "pages/admin/printer/printer"
+    "pages/admin/printer/printer",
+    "pages/admin/photoManage/photoManage",
+    "pages/photoWall/photoWall"
   ],
 
   "window": {

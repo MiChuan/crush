@@ -1,0 +1,25 @@
+<!--pages/photoWall/photoWall.wxml-->
+<view class="photo-wall-page">
+  <view class="page-header">
+    <view class="header-title">照片墙</view>
+    <view class="header-sub">记录美好瞬间</view>
+  </view>
+
+  <view class="photo-grid" wx:if="{{photos.length > 0}}">
+    <image
+      class="photo-item"
+      wx:for="{{photos}}"
+      wx:key="_id"
+      src="{{item.fileID}}"
+      mode="aspectFill"
+      lazy-load="{{true}}"
+      bindtap="previewPhoto"
+      data-index="{{index}}"
+    />
+  </view>
+
+  <view class="empty-state" wx:else>
+    <text class="empty-icon cuIcon-pic"></text>
+    <text class="empty-text">暂无照片，敬请期待</text>
+  </view>
+</view>

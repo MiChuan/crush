@@ -112,9 +112,12 @@
 	flex: 1;
 }
 
-.phone-display {
+.phone-input {
+	flex: 1;
+	height: 70rpx;
 	font-size: 28rpx;
-	color: #999;
+	color: #222;
+	border-bottom: 1rpx solid #f0f0f0;
 }
 
 .phone-btn {

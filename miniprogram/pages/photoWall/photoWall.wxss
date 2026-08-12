@@ -1,0 +1,53 @@
+.photo-wall-page {
+  min-height: 100vh;
+  background: var(--page-bg);
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.page-header {
+  padding: 20rpx 10rpx 30rpx;
+}
+
+.header-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.header-sub {
+  font-size: 24rpx;
+  color: var(--text-muted);
+  margin-top: 8rpx;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.photo-item {
+  width: calc((100% - 32rpx) / 3);
+  height: 220rpx;
+  border-radius: 16rpx;
+  background: #f2f3f5;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+
+.empty-icon {
+  font-size: 120rpx;
+  color: #dcdee0;
+}
+
+.empty-text {
+  font-size: 26rpx;
+  color: var(--text-muted);
+  margin-top: 24rpx;
+}

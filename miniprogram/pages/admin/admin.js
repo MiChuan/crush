@@ -97,6 +97,13 @@ Page({
     })
   },
 
+  // 照片管理
+  goToPhotoManage() {
+    wx.navigateTo({
+      url: '/pages/admin/photoManage/photoManage'
+    })
+  },
+
   // 显示修改密码弹窗
   showChangePassword() {
     this.setData({

@@ -11,7 +11,8 @@ App({
         openidPromise: null, // 用于存储获取openid的Promise对象
         userInfo: null, // 用户信息
         userInfoReady: false,
-        userInfoPromise: null // 用于存储获取用户信息的Promise对象
+        userInfoPromise: null, // 用于存储获取用户信息的Promise对象
+        loggedOut: wx.getStorageSync('loggedOut') === true // 是否已退出登录
       }
       this.userInfoListeners = []
 
@@ -179,10 +180,17 @@ App({
       throw new Error('获取openid失败')
     }
 
+    // 用户主动授权/保存资料，视为重新登录
+    this.login()
+
     return this.syncUserRecord(updateData)
   },
 
   setUserInfo: function(userInfo) {
+    // 已退出登录时，禁止自动填充用户信息（防止页面查库后被动"重新登录"）
+    if (this.isLoggedOut()) {
+      return
+    }
     this.globalData.userInfo = {
       ...(this.globalData.userInfo || {}),
       ...(userInfo || {})
@@ -195,6 +203,32 @@ App({
         listener(this.globalData.userInfo)
       }
     })
+  },
+
+  // 退出登录
+  logout: function() {
+    this.globalData.loggedOut = true
+    wx.setStorageSync('loggedOut', true)
+    this.globalData.userInfo = null
+    this.globalData.userInfoReady = false
+
+    const listeners = this.userInfoListeners || []
+    listeners.forEach(listener => {
+      if (typeof listener === 'function') {
+        listener(null)
+      }
+    })
+  },
+
+  // 重新登录（用户主动授权/保存资料时调用）
+  login: function() {
+    this.globalData.loggedOut = false
+    wx.setStorageSync('loggedOut', false)
+  },
+
+  // 是否已退出登录（优先读取持久化存储，避免 globalData 被重置后状态丢失）
+  isLoggedOut: function() {
+    return wx.getStorageSync('loggedOut') === true
   },
 
   onUserInfoChange: function(listener) {

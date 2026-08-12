@@ -11,7 +11,7 @@
 
 	
 				<view class="super-avatar-box">
-					<button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="chooseavatar"></button>
+					<button class="avatar-btn" bindtap="onChooseAvatar"></button>
 					<view class="avatar-img-box flex-jc-ac">
 						<image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" mode="scaleToFill" style="height: 175rpx; width: 175rpx; border-radius: 20rpx;"></image>
 						<image wx:else src="./image/moren.png" mode="widthFix" style="height: 105rpx; width: 105rpx;"></image>
@@ -22,20 +22,24 @@
 				<view class="super-nick-name-box flex-jb-ac">
 					<view class="nick-name-box flex-ac">
 						<view style="font-size: 28rpx; color: #222; width: 150rpx;">昵称</view>
-						<input class="nick-name-input" placeholder="点击获取您的昵称" type="nickname" value="{{nickName}}" bindblur="bindblur"></input>
-					</view>
-					<view class="flex-jc-ac">
-						<image src="./image/arrow.png" mode="widthFix" style="height: 45rpx; width: 45rpx;"></image>
+						<input class="nick-name-input" placeholder="请输入您的昵称" type="text" maxlength="20" value="{{nickName}}" bindinput="onNickNameInput"></input>
 					</view>
 				</view>
 
 				<view class="super-phone-box flex-jb-ac">
 					<view class="phone-label-box flex-ac">
 						<view style="font-size: 28rpx; color: #222; width: 150rpx;">手机号</view>
-						<view class="phone-display">{{phoneNumber || '未获取'}}</view>
+						<input
+							class="phone-input"
+							type="number"
+							maxlength="11"
+							placeholder="请输入手机号或一键获取"
+							value="{{phoneNumber}}"
+							bindinput="onPhoneInput"
+						/>
 					</view>
 					<button class="phone-btn" open-type="getPhoneNumber" bindgetphonenumber="getphonenumber">
-						{{phoneNumber ? '重新获取' : '获取手机号'}}
+						授权获取
 					</button>
 				</view>
 

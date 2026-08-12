@@ -22,7 +22,7 @@ Page({
     if (typeof app.onUserInfoChange === 'function') {
       app.onUserInfoChange(this.userInfoChangeHandler)
     }
-    if (app.globalData.userInfo) {
+    if (!app.isLoggedOut() && app.globalData.userInfo) {
       this.applyUserInfo(app.globalData.userInfo)
     }
     this.loadUserInfo()
@@ -30,6 +30,10 @@ Page({
   },
 
   onShow() {
+    if (app.isLoggedOut()) {
+      this.setData({ userInfo: null })
+      return
+    }
     if (app.globalData.userInfo) {
       this.applyUserInfo(app.globalData.userInfo)
     }
@@ -43,7 +47,10 @@ Page({
   },
 
   applyUserInfo(userInfo) {
-    if (!userInfo) return
+    if (!userInfo) {
+      this.setData({ userInfo: null })
+      return
+    }
     this.setData({
       userInfo: {
         ...(this.data.userInfo || {}),
@@ -55,12 +62,20 @@ Page({
 
   // 加载用户信息
   async loadUserInfo() {
+    // 已退出登录：不自动拉取用户信息
+    if (app.isLoggedOut()) {
+      this.setData({ userInfo: null })
+      return
+    }
     try {
       const openid = app.globalData.openid
       const res = await db.collection('user').where({
         _openid: openid
       }).get()
-      
+
+      // 查询期间用户可能已退出登录，禁止回填
+      if (app.isLoggedOut()) return
+
       if (res.data && res.data.length > 0) {
         const user = res.data[0]
         // 初始化余额字段
@@ -97,6 +112,9 @@ Page({
   // 用户信息保存成功回调
   onUserInfoSaved(e) {
     const userInfo = e.detail && (e.detail.userInfo || e.detail)
+    if (typeof app.login === 'function') {
+      app.login()
+    }
     this.applyUserInfo(userInfo)
     // 刷新用户信息
     this.loadUserInfo()
@@ -296,6 +314,32 @@ Page({
         icon: 'none'
       })
     }
+  },
+
+  // 退出登录
+  logout() {
+    wx.showModal({
+      title: '确认退出',
+      content: '退出后需要重新登录才能查看个人信息',
+      confirmColor: '#d94335',
+      success: (res) => {
+        if (!res.confirm) return
+        // 清理本地和全局用户数据，并持久化退出状态
+        wx.removeStorageSync('userInfo')
+        if (typeof app.logout === 'function') {
+          app.logout()
+        } else {
+          app.globalData.userInfo = null
+        }
+        this.setData({
+          userInfo: null
+        })
+        wx.showToast({
+          title: '已退出登录',
+          icon: 'success'
+        })
+      }
+    })
   },
 
   // 获取版本号

@@ -60,7 +60,7 @@
 .home-card {
   position: relative;
   z-index: 2;
-  margin: -80rpx 30rpx 0;
+  margin: -50rpx 30rpx 0;
   background: #ffffff;
   border-radius: 32rpx;
   box-shadow: 0 16rpx 50rpx rgba(27, 36, 48, 0.1);
@@ -70,6 +70,7 @@
 .welcome-bar {
   background: linear-gradient(90deg, #ff8c3a 0%, #ff6b35 100%);
   padding: 20rpx 30rpx;
+  text-align: center;
 }
 
 .welcome-label {
@@ -189,6 +190,51 @@
 }
 
 .recharge-arrow {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
+
+/* 照片墙入口 */
+.photo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30rpx 30rpx;
+  padding: 26rpx 30rpx;
+  background: linear-gradient(90deg, #f7f4ff 0%, #ffffff 100%);
+  border: 1rpx solid rgba(114, 50, 221, 0.12);
+  border-radius: 20rpx;
+}
+
+.photo-left {
+  display: flex;
+  align-items: center;
+}
+
+.photo-icon {
+  font-size: 40rpx;
+  color: #7232dd;
+  margin-right: 16rpx;
+}
+
+.photo-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.photo-right {
+  display: flex;
+  align-items: center;
+}
+
+.photo-tip {
+  font-size: 24rpx;
+  color: var(--text-muted);
+  margin-right: 8rpx;
+}
+
+.photo-arrow {
   font-size: 24rpx;
   color: var(--text-muted);
 }

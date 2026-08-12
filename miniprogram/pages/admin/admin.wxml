@@ -83,6 +83,13 @@
         clickable
         bind:click="goToTableCode"
       />
+      <van-grid-item 
+        icon="photo-o" 
+        icon-color="#7232dd"
+        text="照片管理" 
+        clickable
+        bind:click="goToPhotoManage"
+      />
     </van-grid>
   </view>
 

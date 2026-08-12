@@ -1,0 +1,40 @@
+<!-- pages/admin/photoManage/photoManage.wxml -->
+<view class="page">
+  <view class="page-tools">
+    <view class="tools-title">
+      <text class="tools-icon cuIcon-pic"></text>
+      <text>照片管理</text>
+    </view>
+    <view class="add-btn" bindtap="choosePhotos" hover-class="control-pressed">
+      <text class="cuIcon-add"></text>
+      <text>上传照片</text>
+    </view>
+  </view>
+
+  <view class="photo-grid" wx:if="{{photos.length > 0}}">
+    <view class="photo-cell" wx:for="{{photos}}" wx:key="_id">
+      <image
+        class="photo-img"
+        src="{{item.fileID}}"
+        mode="aspectFill"
+        lazy-load="{{true}}"
+        bindtap="previewPhoto"
+        data-index="{{index}}"
+      />
+      <view
+        class="photo-delete"
+        catchtap="deletePhoto"
+        data-item="{{item}}"
+        hover-class="control-pressed"
+        aria-role="button"
+        aria-label="删除照片">
+        <text class="cuIcon-delete"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:else>
+    <text class="empty-icon cuIcon-pic"></text>
+    <text class="empty-text">暂无照片，点击右上角「上传照片」</text>
+  </view>
+</view>

@@ -6,7 +6,7 @@
     <view class="brand-content">
       <view class="brand-title">CRUSH</view>
       <view class="brand-subtitle">COCKTAIL BAR</view>
-      <view class="brand-slogan">目舜 · 自舜</view>
+      <view class="brand-slogan">目舜·酒吧</view>
     </view>
   </view>
 
@@ -47,6 +47,18 @@
       <view class="recharge-right">
         <text class="recharge-tip">充值享优惠</text>
         <text class="cuIcon-right recharge-arrow"></text>
+      </view>
+    </view>
+
+    <!-- 照片墙入口 -->
+    <view class="photo-row" bindtap="goToPhotoWall">
+      <view class="photo-left">
+        <text class="photo-icon cuIcon-pic"></text>
+        <text class="photo-title">照片墙</text>
+      </view>
+      <view class="photo-right">
+        <text class="photo-tip">精彩瞬间</text>
+        <text class="cuIcon-right photo-arrow"></text>
       </view>
     </view>
   </view>

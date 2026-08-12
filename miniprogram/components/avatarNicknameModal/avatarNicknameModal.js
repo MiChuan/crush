@@ -19,6 +19,7 @@ Component({
     phoneNumber: null,
     phoneCode: null,
     realPhoneNumber: null, // 真实的手机号（用于提交）
+    choosingAvatar: false, // 是否正在选择头像（防止重复触发 chooseAvatar）
   },
 
   /**
@@ -31,19 +32,44 @@ Component({
     catchtouchmove() { },
 
     /**
-     * 选择头像返回信息监听
+     * 选择头像（使用 wx.chooseMedia，避免 open-type="chooseAvatar" 在模拟器/真机重复触发报错）
      */
-    chooseavatar(res) {
-      const avatarUrl = res.detail.avatarUrl
-      this.setData({
-        avatarUrl: avatarUrl
+    onChooseAvatar() {
+      if (this.data.choosingAvatar) return
+      this.setData({ choosingAvatar: true })
+      wx.chooseMedia({
+        count: 1,
+        mediaType: ['image'],
+        sourceType: ['album', 'camera'],
+        sizeType: ['compressed'],
+        success: (res) => {
+          const tempFilePath = res.tempFiles[0].tempFilePath
+          this.setData({
+            avatarUrl: tempFilePath,
+            choosingAvatar: false
+          })
+        },
+        fail: () => {
+          this.setData({ choosingAvatar: false })
+        }
       })
     },
 
-    /** 获取昵称信息 */
-    bindblur(res) {
-      const value = res.detail.value
-      this.data.nickName = value
+    /** 手动输入昵称 */
+    onNickNameInput(e) {
+      const value = e.detail.value
+      this.setData({
+        nickName: value
+      })
+    },
+
+    /** 手动输入手机号 */
+    onPhoneInput(e) {
+      const value = e.detail.value
+      this.setData({
+        phoneNumber: value,
+        realPhoneNumber: value
+      })
     },
 
     /** 获取手机号 */
@@ -127,13 +153,22 @@ Component({
 
       if (!realPhoneNumber && !phoneNumber) {
         wx.showToast({
-          title: '请授权手机号',
+          title: '请输入手机号',
           icon: 'none'
         })
         return
       }
 
       const phone = realPhoneNumber || phoneNumber
+
+      // 校验手机号格式
+      if (!/^1[3-9]\d{9}$/.test(phone)) {
+        wx.showToast({
+          title: '手机号格式不正确',
+          icon: 'none'
+        })
+        return
+      }
 
       try {
         wx.showLoading({ title: '保存中...' })
@@ -206,7 +241,8 @@ Component({
         avatarUrl: null,
         phoneNumber: null,
         phoneCode: null,
-        realPhoneNumber: null
+        realPhoneNumber: null,
+        choosingAvatar: false
       })
     },
   }

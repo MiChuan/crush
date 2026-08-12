@@ -21,12 +21,16 @@ Page({
     if (typeof app.onUserInfoChange === 'function') {
       app.onUserInfoChange(this.userInfoChangeHandler)
     }
-    if (app.globalData.userInfo) {
+    if (!app.isLoggedOut() && app.globalData.userInfo) {
       this.applyUserInfo(app.globalData.userInfo)
     }
   },
 
   onShow() {
+    if (app.isLoggedOut()) {
+      this.setData({ userInfo: null })
+      return
+    }
     this.loadUserInfo()
   },
 
@@ -38,6 +42,11 @@ Page({
 
   // 加载用户信息
   async loadUserInfo() {
+    // 已退出登录：不自动拉取用户信息
+    if (app.isLoggedOut()) {
+      this.setData({ userInfo: null })
+      return
+    }
     try {
       const openid = app.globalData.openid
       if (!openid) return
@@ -45,6 +54,9 @@ Page({
       const res = await db.collection('user').where({
         _openid: openid
       }).get()
+
+      // 查询期间用户可能已退出登录，禁止回填
+      if (app.isLoggedOut()) return
 
       if (res.data && res.data.length > 0) {
         const user = res.data[0]
@@ -67,7 +79,10 @@ Page({
   },
 
   applyUserInfo(userInfo) {
-    if (!userInfo) return
+    if (!userInfo) {
+      this.setData({ userInfo: null })
+      return
+    }
     this.setData({
       userInfo: {
         ...(this.data.userInfo || {}),
@@ -87,6 +102,9 @@ Page({
   // 授权成功
   onUserInfoSaved(e) {
     const userInfo = e.detail && (e.detail.userInfo || e.detail)
+    if (typeof app.login === 'function') {
+      app.login()
+    }
     this.applyUserInfo(userInfo)
     this.loadUserInfo()
   },
@@ -106,6 +124,13 @@ Page({
     }
     wx.navigateTo({
       url: '/pages/recharge/recharge'
+    })
+  },
+
+  // 跳转到照片墙
+  goToPhotoWall() {
+    wx.navigateTo({
+      url: '/pages/photoWall/photoWall'
     })
   },
 
