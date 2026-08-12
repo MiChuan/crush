@@ -6,14 +6,14 @@
     <view class="brand-content">
       <view class="brand-title">CRUSH</view>
       <view class="brand-subtitle">COCKTAIL BAR</view>
-      <view class="brand-slogan">目彝 · 自彝</view>
+      <view class="brand-slogan">目舜 · 自舜</view>
     </view>
   </view>
 
   <!-- 欢迎与会员卡片 -->
   <view class="home-card">
     <view class="welcome-bar">
-      <text class="welcome-label">Hello，欢迎来到 CRUSH 目彝 cocktail bar！</text>
+      <text class="welcome-label">Hello，欢迎来到 CRUSH 目舜 cocktail bar！</text>
     </view>
 
     <view class="member-row" bindtap="onMemberTap">
