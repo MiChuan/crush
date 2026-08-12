@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<view class="home-page">
+  <!-- 顶部品牌横幅 -->
+  <view class="brand-hero" style="padding-top: {{statusBarHeight}}px;">
+    <view class="brand-backdrop"></view>
+    <view class="brand-content">
+      <view class="brand-title">CRUSH</view>
+      <view class="brand-subtitle">COCKTAIL BAR</view>
+      <view class="brand-slogan">目彝 · 自彝</view>
+    </view>
+  </view>
+
+  <!-- 欢迎与会员卡片 -->
+  <view class="home-card">
+    <view class="welcome-bar">
+      <text class="welcome-label">Hello，欢迎来到 CRUSH 目彝 cocktail bar！</text>
+    </view>
+
+    <view class="member-row" bindtap="onMemberTap">
+      <view class="member-info">
+        <view class="member-title">{{userInfo && userInfo.nickName ? '欢迎回来，' + userInfo.nickName : '欢迎光临，请登录'}}</view>
+        <view class="member-sub">{{userInfo && userInfo.phoneNumber ? '会员余额 ¥' + (userInfo.balance || 0) : '成为会员，享受更多会员权益'}}</view>
+      </view>
+      <view class="login-btn">{{userInfo && userInfo.phoneNumber ? '已登录' : '立即登录'}}</view>
+    </view>
+
+    <!-- 核心入口 -->
+    <view class="action-grid">
+      <view class="action-card order" bindtap="goToOrder">
+        <view class="action-icon cuIcon-shopfill"></view>
+        <view class="action-title">点单</view>
+        <view class="action-en">STORE ORDER</view>
+      </view>
+      <view class="action-card reserve" bindtap="goToReserve">
+        <view class="action-icon cuIcon-form"></view>
+        <view class="action-title">预定</view>
+        <view class="action-en">RESERVE</view>
+      </view>
+    </view>
+
+    <!-- 充值入口 -->
+    <view class="recharge-row" bindtap="goToRecharge">
+      <view class="recharge-left">
+        <text class="recharge-icon cuIcon-pay"></text>
+        <text class="recharge-title">会员充值</text>
+      </view>
+      <view class="recharge-right">
+        <text class="recharge-tip">充值享优惠</text>
+        <text class="cuIcon-right recharge-arrow"></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 用户信息授权组件 -->
+  <avatar-nickname-modal
+    showAvaModal="{{showAuthModal}}"
+    bind:saved="onUserInfoSaved">
+  </avatar-nickname-modal>
+</view>

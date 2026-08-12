@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "avatar-nickname-modal": "/components/avatarNicknameModal/avatarNicknameModal"
+  }
+}

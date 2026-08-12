@@ -112,7 +112,7 @@ Page({
       return
     }
 
-    wx.switchTab({
+    wx.navigateTo({
       url: '/pages/recharge/recharge'
     })
   },
