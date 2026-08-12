@@ -333,16 +333,23 @@ const bgImg = "把images文件夹的bg.png上传到云存储，得到url。你�
 
 ## ✅ 待办事项
 
-> 上线前请完成以下两项，否则对应功能不可用：
+> 上线前请完成以下事项，否则对应功能不可用：
 
-### 1. 微信支付商户号获取
+### 1. 配置云数据库
+
+- 在云开发控制台创建 8 个集合：`user`、`dish`、`dishCategory`、`order`、`printer`、`rechargeOptions`、`admin`、`tableCode`
+- 导入《数据库集合初始化数据.md》中的初始化数据（必导：`dishCategory`、`dish`、`rechargeOptions`；推荐：`admin`）
+- 每个集合权限设置为自定义安全规则：`{ "read": true, "write": true }`
+- **影响**：未配置则小程序无法获取菜品分类、无法下单等核心功能不可用
+
+### 2. 微信支付商户号获取
 
 - 前往 [微信支付商户平台](https://pay.weixin.qq.com) 注册并获取商户号（需开通 APIv3 密钥）
 - 在微信开发者工具 → 云开发控制台 → 设置 → 授权管理 → **开通云支付**，绑定该商户号
 - 将商户号填入 `cloudfunctions/pay/index.js` 的 `subMchId` 字段
 - **影响**：未配置则**点餐微信支付、充值**不可用（余额支付不受影响）
 
-### 2. 小票打印设备获取
+### 3. 小票打印设备获取
 
 - 购买大趋智能小票打印机（约 259 元），前往 [大趋智能开放平台](https://open.trenditiot.com) 注册开发者账号
 - 在平台绑定打印机，获取打印机的 `SN` 和 `KEY`
