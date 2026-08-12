@@ -1,6 +1,6 @@
 # 一个基于微信云开发的餐饮店点餐小程序（含顾客和管理员功能）
 
-### 想了很久，决定免费开源！！！喜欢的记得给star星星
+## 项目介绍
 
 背景：市面上不缺点餐系统，但是贵？不好用？所以我开发了这款非常适合餐饮店的点餐小程序。
 
@@ -379,33 +379,3 @@ const bgImg = "把images文件夹的bg.png上传到云存储，得到url。你�
 - 打印小票机:259块左右
 
 成本不到300块就拥有自己的点餐小程序。
-
-
-
-
----
-
-## 💰 打赏支持
-
-如果这个项目对你有帮助，欢迎打赏支持！
-
-部署遇到问题的，需要协助可以v：yxh1168888
-
-<table>
-  <tr>
-    <td width="25%">
-      <img src="./miniprogram/images/githubImg/skm.png" alt="收款码" />
-      <br />
-      <div align="center">打赏支持</div>
-    </td>
-    <td width="25%">
-      <img src="./miniprogram/images/githubImg/wx.jpg" alt="微信页面" />
-      <br />
-      <div align="center">微信(备注来意)</div>
-    </td>
-  </tr>
-</table>
-
----
-
-**祝生意兴隆！** 🎉

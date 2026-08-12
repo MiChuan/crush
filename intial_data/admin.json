@@ -1,0 +1,9 @@
+[
+  {
+    "password": "123456",
+    "shopName": "测试小店",
+    "welcomeText": "欢迎光临，请扫码点餐~",
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" },
+    "updateTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  }
+]

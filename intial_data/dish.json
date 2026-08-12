@@ -1,0 +1,131 @@
+[
+  {
+    "name": "招牌红烧肉",
+    "description": "肥而不腻，入口即化，本店招牌",
+    "categoryId": "cat001",
+    "categoryName": "招牌热菜",
+    "image": "",
+    "images": [],
+    "price": 38,
+    "status": 1,
+    "sort": 1,
+    "tags": [],
+    "skus": [
+      {
+        "id": "sku001",
+        "name": "标准份",
+        "price": 38,
+        "status": 1,
+        "sort": 0
+      },
+      {
+        "id": "sku002",
+        "name": "大份",
+        "price": 52,
+        "status": 1,
+        "sort": 1
+      }
+    ],
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" },
+    "updateTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  },
+  {
+    "name": "酸辣土豆丝",
+    "description": "酸辣开胃，下饭必备",
+    "categoryId": "cat001",
+    "categoryName": "招牌热菜",
+    "image": "",
+    "images": [],
+    "price": 16,
+    "status": 1,
+    "sort": 2,
+    "tags": [
+      {
+        "id": "tag001",
+        "name": "辣度",
+        "type": "single",
+        "required": true,
+        "options": ["不辣", "微辣", "中辣", "特辣"]
+      }
+    ],
+    "skus": [
+      {
+        "id": "sku003",
+        "name": "标准份",
+        "price": 16,
+        "status": 1,
+        "sort": 0
+      }
+    ],
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" },
+    "updateTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  },
+  {
+    "name": "冰镇柠檬水",
+    "description": "新鲜柠檬现榨，清爽解腻",
+    "categoryId": "cat002",
+    "categoryName": "饮品小食",
+    "image": "",
+    "images": [],
+    "price": 8,
+    "status": 1,
+    "sort": 1,
+    "tags": [
+      {
+        "id": "tag002",
+        "name": "甜度",
+        "type": "single",
+        "required": true,
+        "options": ["三分糖", "五分糖", "七分糖", "全糖"]
+      },
+      {
+        "id": "tag003",
+        "name": "加冰",
+        "type": "multiple",
+        "required": false,
+        "options": ["去冰", "少冰", "加冰"]
+      }
+    ],
+    "skus": [
+      {
+        "id": "sku004",
+        "name": "中杯",
+        "price": 8,
+        "status": 1,
+        "sort": 0
+      },
+      {
+        "id": "sku005",
+        "name": "大杯",
+        "price": 10,
+        "status": 1,
+        "sort": 1
+      }
+    ],
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" },
+    "updateTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  },
+  {
+    "name": "香脆薯条",
+    "description": "金黄酥脆，配番茄酱",
+    "categoryId": "cat002",
+    "categoryName": "饮品小食",
+    "image": "",
+    "images": [],
+    "price": 12,
+    "status": 1,
+    "sort": 2,
+    "tags": [],
+    "skus": [
+      {
+        "id": "sku006",
+        "name": "标准份",
+        "price": 12,
+        "status": 1,
+        "sort": 0
+      }
+    ],
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" },
+    "updateTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  }
+]

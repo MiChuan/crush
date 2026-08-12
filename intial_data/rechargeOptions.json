@@ -1,0 +1,26 @@
+[
+  {
+    "amount": 50,
+    "giveAmount": 5,
+    "isRecommend": false,
+    "status": 1,
+    "description": "充50送5",
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  },
+  {
+    "amount": 100,
+    "giveAmount": 15,
+    "isRecommend": true,
+    "status": 1,
+    "description": "充100送15，最受欢迎",
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  },
+  {
+    "amount": 200,
+    "giveAmount": 40,
+    "isRecommend": false,
+    "status": 1,
+    "description": "充200送40",
+    "createTime": { "$date": "2026-08-01T00:00:00.000Z" }
+  }
+]
