@@ -1,6 +1,6 @@
 page {
   min-height: 100%;
-  background: #fed71a;
+  background: #ffffff;
   color: #29282a;
 }
 
@@ -13,7 +13,7 @@ page {
 .page {
   min-height: 100vh;
   padding-bottom: calc(164rpx + env(safe-area-inset-bottom));
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .campaign-hero {
@@ -334,7 +334,7 @@ page {
 
 .gift-line.no-gift {
   color: #77767b;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .gift-line text:first-child {

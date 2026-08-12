@@ -1,7 +1,7 @@
 /* pages/settle/settle.wxss */
 .page {
   min-height: 100vh;
-  background: #fed71a;
+  background: #ffffff;
   box-sizing: border-box;
   padding-bottom: calc(164rpx + env(safe-area-inset-bottom));
 }
@@ -63,7 +63,7 @@
   text-align: center;
   font-size: 28rpx;
   color: #666;
-  background: #fed71a;
+  background: #ffffff;
   border-radius: 12rpx;
   border: 2rpx solid transparent;
   transition: all 0.3s;
@@ -78,7 +78,7 @@
   margin: 0 30rpx;
   padding: 20rpx;
   border-radius: 12rpx;
-  background: #fed71a;
+  background: #ffffff;
   color: #333;
   font-size: 28rpx;
   line-height: 1.5;
@@ -159,7 +159,7 @@
 }
 
 .goods-item:active {
-  background-color: #fed71a;
+  background-color: #ffffff;
 }
 
 .goods-image {
@@ -167,7 +167,7 @@
   height: 140rpx;
   border-radius: 16rpx;
   flex-shrink: 0;
-  background: #fed71a;
+  background: #ffffff;
   overflow: hidden;
 }
 
@@ -283,7 +283,7 @@
 
 .pay-method-item {
   flex: 1;
-  background: #fed71a;
+  background: #ffffff;
   border-radius: 16rpx;
   border: 2rpx solid transparent;
   padding: 20rpx;
@@ -428,7 +428,7 @@
 /* 高级版视觉覆盖 */
 .page {
   padding-top: 20rpx;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .section {
@@ -452,7 +452,7 @@
 }
 
 .order-type-item {
-  background: #fed71a;
+  background: #ffffff;
   border-color: #ebeef3;
   color: #69707d;
 }
@@ -466,7 +466,7 @@
 
 .remark-input,
 .pay-method-item {
-  background: #fed71a;
+  background: #ffffff;
   border: 1rpx solid #ebeef3;
 }
 
@@ -484,7 +484,7 @@
 
 .goods-image {
   border-radius: 14rpx;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .goods-sku {

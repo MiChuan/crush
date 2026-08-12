@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 /* 状态栏占位 */
@@ -53,7 +53,7 @@
 }
 
 .menu-item.active {
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .menu-name {
@@ -133,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fed71a;
+  background: #ffffff;
   color: #999;
   font-size: 24rpx;
 }
@@ -242,7 +242,7 @@
 }
 
 .action-btn.reduce {
-  background: #fed71a;
+  background: #ffffff;
   color: #666;
 }
 
@@ -367,7 +367,7 @@
 .settle-btn {
   padding: 22rpx 45rpx;
   border-radius: 50rpx;
-  background: #fed71a;
+  background: #ffffff;
   color: #999;
   font-size: 28rpx;
   font-weight: bold;
@@ -643,7 +643,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fed71a;
+  background: #ffffff;
   color: #999;
   font-size: 26rpx;
 }
@@ -682,7 +682,7 @@
 .tag-section {
   margin-bottom: 30rpx;
   padding: 25rpx;
-  background: #fed71a;
+  background: #ffffff;
   border-radius: 16rpx;
 }
 
@@ -781,7 +781,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 25rpx;
-  background: #fed71a;
+  background: #ffffff;
   border-radius: 16rpx;
   margin-top: 30rpx;
 }
@@ -812,7 +812,7 @@
 }
 
 .quantity-btn.disabled {
-  background: #fed71a;
+  background: #ffffff;
   color: #999;
 }
 
@@ -869,7 +869,7 @@
 
 /* 高级版视觉覆盖 */
 .page {
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .status-bar,
@@ -912,7 +912,7 @@
 }
 
 .menu-item.active {
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .menu-item.active .menu-name {
@@ -943,7 +943,7 @@
 .goods-image,
 .dish-detail-image {
   border-radius: 14rpx;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .goods-name,
@@ -989,7 +989,7 @@
 }
 
 .action-btn.reduce {
-  background: #fed71a;
+  background: #ffffff;
   color: #69707d;
 }
 
@@ -1019,7 +1019,7 @@
 
 .tag-section,
 .quantity-section {
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .sku-option.selected {

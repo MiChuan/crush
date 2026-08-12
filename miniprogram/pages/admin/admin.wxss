@@ -8,7 +8,7 @@
   --admin-body: #56605d;
   --admin-muted: #7e8985;
   --admin-line: #dfe5e1;
-  --admin-canvas: #fed71a;
+  --admin-canvas: #ffffff;
   --admin-surface: #ffffff;
   min-height: 100vh;
   padding-bottom: calc(32rpx + env(safe-area-inset-bottom));

@@ -1,7 +1,7 @@
 /* pages/admin/order/order.wxss */
 .page {
   min-height: 100vh;
-  background: #fed71a;
+  background: #ffffff;
   padding: 20rpx;
   padding-bottom: 40rpx;
 }
@@ -70,7 +70,7 @@
   height: 80rpx;
   border-radius: 50%;
   margin-right: 20rpx;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .user-info-text {
@@ -103,7 +103,7 @@
 /* 充值订单信息 */
 .recharge-info {
   padding: 20rpx;
-  background: #fed71a;
+  background: #ffffff;
   border-radius: 12rpx;
 }
 
@@ -310,7 +310,7 @@
 
 /* 高级版视觉覆盖 */
 .page {
-  background: #fed71a;
+  background: #ffffff;
   padding: 24rpx;
   padding-bottom: 48rpx;
 }
@@ -376,12 +376,12 @@
 }
 
 .recharge-info {
-  background: #fed71a;
+  background: #ffffff;
   border: 1rpx solid #ebeef3;
 }
 
 .goods-image {
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .goods-sku,
@@ -401,7 +401,7 @@
 
 .order-footer {
   border-top-color: #ebeef3;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .print-status-text.printed {

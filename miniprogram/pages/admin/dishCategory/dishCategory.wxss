@@ -1,7 +1,7 @@
 /* pages/admin/dishCategory/dishCategory.wxss */
 .page {
   min-height: 100vh;
-  background: #fed71a;
+  background: #ffffff;
   padding: 20rpx;
   padding-bottom: 40rpx;
 }
@@ -184,7 +184,7 @@
 
 /* 高级版视觉覆盖 */
 .page {
-  background: #fed71a;
+  background: #ffffff;
   padding: 24rpx;
   padding-bottom: 48rpx;
 }
@@ -263,7 +263,7 @@
 .form-input {
   height: 88rpx;
   border-color: #e6e9ef;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .modal-footer {

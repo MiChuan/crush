@@ -11,7 +11,7 @@
   --menu-line: #e8e8ea;
   --menu-neutral: #f2f3f5;
   --menu-surface: #ffffff;
-  --menu-canvas: #fed71a;
+  --menu-canvas: #ffffff;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -560,7 +560,7 @@
 
 .action-btn.status {
   color: #6d7077;
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .is-offline .action-btn.status {
@@ -1012,7 +1012,7 @@
   align-items: center;
   justify-content: center;
   color: var(--menu-muted);
-  background: #fed71a;
+  background: #ffffff;
   border: 2rpx dashed #cbd3ce;
 }
 
@@ -1056,7 +1056,7 @@
 .sku-card,
 .tag-card {
   padding: 18rpx;
-  background: #fed71a;
+  background: #ffffff;
   border: 2rpx solid #e1e6e3;
   border-radius: 12rpx;
 }
@@ -1299,7 +1299,7 @@
   display: flex;
   align-items: center;
   gap: 12rpx;
-  background: #fed71a;
+  background: #ffffff;
   border: 2rpx solid #e1e6e3;
   border-radius: 10rpx;
 }
@@ -1395,7 +1395,7 @@
 .action-btn-pressed,
 .soft-control-pressed,
 .icon-control-pressed {
-  background: #fed71a !important;
+  background: #ffffff !important;
 }
 
 @media (min-width: 600px) {

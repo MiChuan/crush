@@ -3,7 +3,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   padding: 24rpx 24rpx calc(34rpx + env(safe-area-inset-bottom));
-  background: #fed71a;
+  background: #ffffff;
 }
 
 .member-hero {
@@ -310,7 +310,7 @@ button.service-tile::after {
   padding: 0 22rpx;
   border: 2rpx solid #e6e9ef;
   border-radius: 12rpx;
-  background: #fed71a;
+  background: #ffffff;
   font-size: 28rpx;
 }
 
