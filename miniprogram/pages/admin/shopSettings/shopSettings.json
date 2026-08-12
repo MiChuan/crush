@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "店铺设置",
-  "navigationBarBackgroundColor": "#c93b32",
-  "navigationBarTextStyle": "white",
-  "backgroundColor": "#f5f6f7",
+  "navigationBarBackgroundColor": "#fed71a",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#fed71a",
   "usingComponents": {}
 }

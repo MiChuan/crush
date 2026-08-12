@@ -18,16 +18,16 @@
   ],
 
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#d94335",
+    "backgroundColor": "#fed71a",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fed71a",
     "navigationBarTitleText": "餐饮点餐",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#d94335",
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "#fed71a",
     "list": [
       {
         "pagePath": "pages/index/index",

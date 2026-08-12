@@ -19,11 +19,11 @@ page {
   --text-muted: #9aa1ad;
   --line-color: #ebeef3;
   --card-bg: #ffffff;
-  --page-bg: #f6f7f9;
+  --page-bg: #fed71a;
   --card-shadow: 0 12rpx 34rpx rgba(27, 36, 48, 0.07);
   --soft-shadow: 0 8rpx 22rpx rgba(217, 67, 53, 0.16);
   --theme-gradient: linear-gradient(135deg, #b9322a 0%, #d94335 56%, #f36a5d 100%);
-  background-color: #f6f7f9;
+  background-color: #fed71a;
   color: #22252b;
   font-size: 28rpx;
 }

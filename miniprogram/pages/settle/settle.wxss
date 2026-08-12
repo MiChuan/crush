@@ -1,7 +1,7 @@
 /* pages/settle/settle.wxss */
 .page {
   min-height: 100vh;
-  background: #f7f7f7;
+  background: #fed71a;
   box-sizing: border-box;
   padding-bottom: calc(164rpx + env(safe-area-inset-bottom));
 }
@@ -63,7 +63,7 @@
   text-align: center;
   font-size: 28rpx;
   color: #666;
-  background: #f5f5f5;
+  background: #fed71a;
   border-radius: 12rpx;
   border: 2rpx solid transparent;
   transition: all 0.3s;
@@ -78,7 +78,7 @@
   margin: 0 30rpx;
   padding: 20rpx;
   border-radius: 12rpx;
-  background: #f8f8f8;
+  background: #fed71a;
   color: #333;
   font-size: 28rpx;
   line-height: 1.5;
@@ -159,7 +159,7 @@
 }
 
 .goods-item:active {
-  background-color: #fafafa;
+  background-color: #fed71a;
 }
 
 .goods-image {
@@ -167,7 +167,7 @@
   height: 140rpx;
   border-radius: 16rpx;
   flex-shrink: 0;
-  background: #f5f5f5;
+  background: #fed71a;
   overflow: hidden;
 }
 
@@ -283,7 +283,7 @@
 
 .pay-method-item {
   flex: 1;
-  background: #f8f8f8;
+  background: #fed71a;
   border-radius: 16rpx;
   border: 2rpx solid transparent;
   padding: 20rpx;
@@ -428,7 +428,7 @@
 /* 高级版视觉覆盖 */
 .page {
   padding-top: 20rpx;
-  background: linear-gradient(180deg, #fff7f3 0%, #f6f7f9 260rpx, #f6f7f9 100%);
+  background: #fed71a;
 }
 
 .section {
@@ -452,7 +452,7 @@
 }
 
 .order-type-item {
-  background: #f7f8fa;
+  background: #fed71a;
   border-color: #ebeef3;
   color: #69707d;
 }
@@ -466,7 +466,7 @@
 
 .remark-input,
 .pay-method-item {
-  background: #fbfcfd;
+  background: #fed71a;
   border: 1rpx solid #ebeef3;
 }
 
@@ -484,7 +484,7 @@
 
 .goods-image {
   border-radius: 14rpx;
-  background: #f0f2f5;
+  background: #fed71a;
 }
 
 .goods-sku {
